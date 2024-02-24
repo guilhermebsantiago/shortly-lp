@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "primary-cyan": "#2acfcf",
+            "primary-dark-violet": "#3b3054",
+            "secondary-red": "#f46262",
+            "neutral-gray": "	#bfbfbf",
+            "neutral-grayish-violet": "#9e9aa7",
+            "neutral-very-dark-blue": "#35323e",
+            "neutral-very-dark-violet": "#232127",
+          },
+          fontFamily: {
+          'poppins': ['"poppins"', 'cursive'],
+      },
+        },
+      },
+    }
+  </script>
+</head>
+<body class="font-poppins">
+  <section id="hero-section">
+    <header class="px-28 flex justify-between py-12">
+      <div class="flex items-center   gap-10">
+        <img src="./images/logo.svg" alt="logo">
+        <nav class="gap-10 flex">
+          <a href="#" class="transition-colors hover:text-primary-dark-violet text-neutral-grayish-violet cursor-pointer font-medium">Features</a>
+          <a href="#" class="transition-colors hover:text-primary-dark-violet text-neutral-grayish-violet cursor-pointer font-medium">Pricing</a>
+          <a href="#" class="transition-colors hover:text-primary-dark-violet text-neutral-grayish-violet cursor-pointer font-medium">Resources</a>
+        </nav>
+      </div>
+      <div class="flex gap-10">
+        <button class="hover:text-primary-dark-violet text-neutral-grayish-violet cursor-pointer font-medium">Login</button>
+        <button class="bg-primary-cyan rounded-full py-2 px-4 text-white font-medium cursor-pointer active:bg-primary-dark-violet transition-colors">Sign Up</button>
+      </div>
+      
+    </header>
+
+    <div class="flex items-center pl-28 justify-between">
+      <div class="w-2/3">
+        <h1 class="font-bold text-6xl ">More than just shorter links</h1>
+        <p class=" text-neutral-grayish-violet cursor-pointer font-medium leading-relaxed">Build your brand's recognition and get detailed insights on how your links are performing.</p>
+        <button class="mt-8 bg-primary-cyan rounded-full py-2 px-4 text-white font-medium cursor-pointer active:bg-primary-dark-violet transition-colors">Get Started</button>
+      </div>
+      <img class="w-2/4 translate-x-16" src="./images/illustration-working.svg" alt="a person working">
+    </div>
+  </section>
+  <section id="input-section">
+    <div>
+      <input type="text" name="link" id="link">
+      <button>Shorten It!</button>
+    </div>
+  </section>
+  
+<!--   <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+</html>
