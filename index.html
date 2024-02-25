@@ -28,12 +28,16 @@
           fontFamily: {
           'poppins': ['"poppins"', 'cursive'],
       },
+      backgroundImage: {
+        'desktop-shorten': "url('./images/bg-shorten-desktop.svg')",
+        'footer-texture': "url('/img/footer-texture.png')",
+      }
         },
       },
     }
   </script>
 </head>
-<body class="font-poppins">
+<body class="font-poppins max-w-full min-h-full">
   <section id="hero-section">
     <header class="px-28 flex justify-between py-12">
       <div class="flex items-center   gap-10">
@@ -51,7 +55,7 @@
       
     </header>
 
-    <div class="flex items-center pl-28 justify-between">
+    <div class="flex items-center pl-28 justify-between overflow-hidden">
       <div class="w-2/3">
         <h1 class="font-bold text-6xl ">More than just shorter links</h1>
         <p class=" text-neutral-grayish-violet cursor-pointer font-medium leading-relaxed">Build your brand's recognition and get detailed insights on how your links are performing.</p>
@@ -60,13 +64,47 @@
       <img class="w-2/4 translate-x-16" src="./images/illustration-working.svg" alt="a person working">
     </div>
   </section>
-  <section id="input-section">
-    <div>
-      <input type="text" name="link" id="link">
-      <button>Shorten It!</button>
+
+  <section id="input-section" class="px-28 bg-[linear-gradient(180deg,_#fff_49.9%,_#bfbfbf_50%)]">
+    <div class="flex bg-desktop-shorten bg-cover bg-primary-dark-violet p-12 rounded-lg gap-5 justify-center">
+      <input type="text" name="link" id="link" class="rounded-lg w-full  px-8" placeholder="Shorten a link here...">
+      <button class=" w-1/6 bg-primary-cyan rounded-lg py-4  text-white font-medium cursor-pointer active:bg-primary-dark-violet transition-colors">Shorten It!</button>
     </div>
   </section>
   
+  <section id="statistics-section" class="bg-neutral-gray flex flex-col items-center px-28 pb-32">
+
+      <h3 class="pt-24 text-4xl font-bold text-primary-dark-violet">Advanced Statistics</h3>
+    <p class="leading-relaxed text-medium text-center text-neutral-very-dark-blue pt-8">Track how your links are performing across the web with<br/> our advanced statistics dashboard.</p>
+
+    <div>
+      <div class="h-2 bg-primary-cyan w-3/4 absolute translate-y-64 "></div>
+      <div class="flex justify-between gap-10 pt-20" >
+      <div class="bg-white z-10  rounded-lg p-8">
+        <div class="rounded-full h-16 w-16 p-5 flex items-center justify-center bg-primary-dark-violet -translate-y-16">
+          <img src="./images/icon-brand-recognition.svg" alt="icon-brand-recognition" class="w-full h-full">
+        </div>
+        <h4 class="font-bold text-2xl text-neutral-very-dark-blue pb-4">Brand Recognition</h4>
+        <p class="leading-relaxed text-neutral-very-dark-blue" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis quos magni quisquam, similique, odit optio incidunt sequi sed ut vel porro obcaecati deleniti quibusdam harum. Nemo molestias laudantium facere modi.</p>
+      </div>
+      <div class="bg-white translate-y-16 rounded-lg p-8">
+        <div class="rounded-full h-16 w-16 p-5 flex items-center justify-center bg-primary-dark-violet -translate-y-16">
+          <img src="./images/icon-detailed-records.svg" alt="icon-detailed-records" class="w-full h-full">
+        </div>
+        <h4 class="font-bold text-2xl text-neutral-very-dark-blue pb-4">Detailed Records</h4>
+        <p class="leading-relaxed text-neutral-very-dark-blue">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis quos magni quisquam, similique, odit optio incidunt sequi sed ut vel porro obcaecati deleniti quibusdam harum. Nemo molestias laudantium facere modi.</p>
+      </div>
+      <div class="bg-white translate-y-32 rounded-lg p-8">
+        <div class="rounded-full h-16 w-16 p-5 flex items-center justify-center bg-primary-dark-violet -translate-y-16">
+          <img src="./images/icon-fully-customizable.svg" alt="icon-fully-customizable" class="w-full h-full">
+        </div>
+        <h4 class="font-bold text-2xl text-neutral-very-dark-blue pb-4">Fully Customizable</h4>
+        <p class="leading-relaxed text-neutral-very-dark-blue">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis quos magni quisquam, similique, odit optio incidunt sequi sed ut vel porro obcaecati deleniti quibusdam harum. Nemo molestias laudantium facere modi.</p>
+      </div>
+    </div>
+    
+    </div>
+  </section>
 <!--   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
