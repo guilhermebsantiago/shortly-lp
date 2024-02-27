@@ -24,11 +24,13 @@ let savedUrls = []
 
 async function getShortenUrl(originalUrl) {
   try {
-    const response = await fetch('https://cleanuri.com/api/v1/shorten', {
+    const response = await fetch('https://shrtlnk.dev/api/v2/link', {
       method: 'POST',
       body: `url=${encodeURIComponent(originalUrl.toString())}`,
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
+        'Accept': 'application/json',
+        'api-key': 'QXDcqzJtwUR2gTU1QT8GR76IvDCp6erjhyAoQ0Ehj1qnn'
       },
     });
 
@@ -52,17 +54,17 @@ async function getValue() {
   }
 
   const originalUrl = inputUrl.value;
-  const { error, result_url } = await getShortenUrl(originalUrl);
+  const { message, result_url: shrtlnk } = await getShortenUrl(originalUrl);
 
-  if (error) {
-    errorP.innerText = error;
+  if (message) {
+    errorP.innerText = message;
     if (errorP.classList.contains('hidden')) {
       errorP.classList.toggle('hidden');
     }
     return
   }
 
-  saveUrl(result_url, originalUrl);
+  saveUrl(shrtlnk, originalUrl);
 }
 
 function saveUrl(result_url, originalUrl) {

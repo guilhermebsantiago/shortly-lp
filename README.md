@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/guilhermebsantiago/shortly-lp](https://github.com/guilhermebsantiago/shortly-lp)
+- Live Site URL: [Site](https://shortly-lp.vercel.app/)
 
 ## My process
 
