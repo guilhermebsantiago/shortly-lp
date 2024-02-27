@@ -49,5 +49,5 @@ Users should be able to:
 
 ## Author
 
-- Website - [Guilherme](https://www.guilhermebs.me)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/guilhermebsantiago)
+- Website - [My Portfólio](https://www.guilhermebs.me)
+- Frontend Mentor - [@guilhermebsantiago](https://www.frontendmentor.io/profile/guilhermebsantiago)
