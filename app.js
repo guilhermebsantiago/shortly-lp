@@ -26,10 +26,10 @@ async function getShortenUrl(originalUrl) {
   try {
     const response = await fetch('https://cleanuri.com/api/v1/shorten', {
       method: 'POST',
+      body: `url=${encodeURIComponent(originalUrl.toString())}`,
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
       },
-      body: `url=${encodeURIComponent(originalUrl)}`,
     });
 
     const data = await response.json();
@@ -46,8 +46,8 @@ async function getValue() {
 
   if (!inputUrl.value) {
     errorP.innerText = 'Please add a link';
-    errorP.classList.remove('invisible');
-    errorP.classList.add('visible');
+    errorP.classList.toggle("hidden")
+
     return;
   }
 
@@ -56,8 +56,8 @@ async function getValue() {
 
   if (error) {
     errorP.innerText = error;
-    if (errorP.classList.contains('invisible')) {
-      errorP.classList.toggle('invisible');
+    if (errorP.classList.contains('hidden')) {
+      errorP.classList.toggle('hidden');
     }
     return
   }
@@ -94,11 +94,21 @@ function generateDivs(){
     div.classList.add("rounded-lg")
     div.classList.add("gap-4")
     div.classList.add("items-center")
+    div.classList.add("sm:flex-row")
+    div.classList.add("flex-col")
+    div.classList.add("divide-y")
+    div.classList.add("sm:divide-none")
 
     const innerDiv = document.createElement("div")
     innerDiv.classList.add("flex")
     innerDiv.classList.add("gap-4")
-    innerDiv.classList.add("items-center")
+    innerDiv.classList.add("sm:items-center")
+    innerDiv.classList.add("items-start")
+    innerDiv.classList.add("sm:flex-row")
+    innerDiv.classList.add("flex-col")
+    innerDiv.classList.add("sm:justify-end")
+    innerDiv.classList.add("sm:justify-start")
+    innerDiv.classList.add("w-full")
 
     const p = document.createElement("p")
     p.innerText = element.originalUrl;
@@ -108,12 +118,16 @@ function generateDivs(){
     a.href = element.resultUrl
     a.classList.add("text-primary-cyan")
     a.classList.add("cursor-pointer")
+    a.classList.add("pt-2")
+    a.classList.add("sm:pt-0")
 
     const btn = document.createElement("button")
     btn.innerHTML = "Copy"
     btn.classList.add("text-white")
     btn.classList.add("bg-primary-cyan")
     btn.classList.add("px-10")
+    btn.classList.add("sm:w-auto")
+    btn.classList.add("w-full")
     btn.classList.add("py-2")
     btn.classList.add("rounded-lg")
     btn.classList.add("cursor-pointer")
@@ -145,6 +159,10 @@ document.addEventListener('DOMContentLoaded', function () {
   generateDivs();
 });
 
+function toggleMobileNav(){
+  const mobileNav = document.getElementById("mobile-nav")
+  mobileNav.classList.toggle("hidden")
+}
 
 
 
