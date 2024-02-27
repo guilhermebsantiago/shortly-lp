@@ -87,6 +87,8 @@ function generateDivs(){
   savedUrls = savedLocalUrls;
   const urlsDiv= document.getElementById("urls")
 
+  urlsDiv.innerHTML = '';
+
   savedUrls.forEach(element => {
     const div = document.createElement("div")
     div.classList.add("flex")
@@ -156,6 +158,7 @@ function generateDivs(){
     urlsDiv.appendChild(div)
 
   });
+  
 }
 
 document.addEventListener('DOMContentLoaded', function () {
