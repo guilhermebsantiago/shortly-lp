@@ -27,7 +27,7 @@ async function getShortenUrl(originalUrl) {
     const dataToFetch = {url:originalUrl.toString()}
     const response = await fetch('https://shrtlnk.dev/api/v2/link', {
       method: 'POST',
-      body: JSON.parse(dataToFetch),
+      body: JSON.stringify(dataToFetch),
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
         'Accept': 'application/json',
@@ -55,7 +55,7 @@ async function getValue() {
   }
 
   const originalUrl = inputUrl.value;
-  const { message, result_url: shrtlnk } = await getShortenUrl(originalUrl);
+  const { message, shrtlnk } = await getShortenUrl(originalUrl);
 
   if (message) {
     errorP.innerText = message;
