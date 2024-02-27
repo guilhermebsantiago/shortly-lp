@@ -24,9 +24,10 @@ let savedUrls = []
 
 async function getShortenUrl(originalUrl) {
   try {
+    const dataToFetch = {url:originalUrl.toString()}
     const response = await fetch('https://shrtlnk.dev/api/v2/link', {
       method: 'POST',
-      body: `url=${encodeURIComponent(originalUrl.toString())}`,
+      body: JSON.parse(dataToFetch),
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
         'Accept': 'application/json',
